@@ -1,0 +1,669 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    background: #253141;
+    font-family: "Industrywf",sans-serif;; 
+}
+body{
+    background-image: linear-gradient(to bottom, rgba(37,49,65,.8) 50%, #253141 100%),
+    url("https://assets1.ignimgs.com/2019/03/27/rankingapex-1553715503676.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 10px;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+header .menu-left{ 
+    display: flex;
+}
+header .menu-left .mixer-logo{
+    width: 125px;
+}
+header .menu-left .nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 70px;
+}
+header .menu-left .nav-links a{
+    color: rgba(255, 255, 255, .5);
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 350px;
+    font-size: 1rem;
+}
+header .menu-left .nav-links a:hover{
+    color: rgba(255, 255, 255, 1);
+    transition: .3s ease-in-out;
+}
+header .menu-right{
+    float: right;
+    display: flex;
+    align-items: center; 
+}
+header .menu-right .language{
+    padding: 0 5px;
+    display: flex;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .5);
+    overflow: hidden;
+}
+header .menu-right .language .fas{
+    color: rgba(255, 255, 255, 1);
+    float: right;
+    cursor: pointer;
+    margin-right: 8px;
+}
+header .menu-right .language .dropbtn:hover {
+    color: rgba(255, 255, 255, 1);
+}
+header .menu-right .signin{
+    background-color: #0375d5;
+    padding: 10px 20px;
+    color: white;
+    font-size: .8rem;
+    border-radius: 4px;
+    font-weight: 700px;
+    text-transform: uppercase;
+}
+/*
+Featured Section 
+*/
+.featured-container{
+    width: 1400px;
+    margin: 0 auto;
+}
+#featured{
+    padding: 50px 0;
+}
+#featured .featured-title{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 35px;
+}
+#featured .video-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr 580px 2fr 1fr;
+    grid-gap: 10px;
+}
+#featured .video-section .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#featured .video-section .video .image{
+    width: 100%;
+    height: 300px;
+    background: url(https://icdn6.digitaltrends.com/image/final-fantasy-7-remake-combat-mechanics-system-gameplay-turn-based-real-time-e3-2019-re2-416x416.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+#featured .video-section .video.center{
+    width: 100%;
+    height: 349px;
+}
+#featured .video-section .video.center .image{
+    width: 100%;
+    height: 349px;
+    background: url(https://www.gamepressure.com/gallery/html/news/171074546.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    border: 1.5px solid #00b4f0;
+    cursor: pointer;
+}
+#featured .video-section .video:nth-child(1) .image,
+#featured .video-section .video:nth-child(5) .image{
+    position: relative;
+}
+#featured .video-section .video:nth-child(1) .image .arrow{ 
+    position: absolute;
+    background: rgb(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 8px;
+    transition: all .2s ease-in-out;
+}
+#featured .video-section .video:nth-child(1) .image .arrow:hover, 
+#featured .video-section .video:nth-child(5) .image .arrow:hover{ 
+    background-color: rgb(0,0,0,.6);
+}
+#featured .video-section .video:nth-child(5) .image .arrow{ 
+    position: absolute;
+    background: rgb(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 8px;
+    color: #00b4f0;
+    right: 0;
+    transition: all .2s ease-in-out;
+}
+#featured .video-section .video:nth-child(1) .image .arrow .fas,
+#featured .video-section .video:nth-child(5) .image .arrow .fas{
+    font-size: 1.5rem;
+    color: #00b4f0;
+}
+#featured .dots{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+#featured .dots .circles{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+#featured .dots .circles .circle{
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    
+}
+#featured .dots .circles .circle .background-color{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all .3s ease-in-out;
+}
+#featured .dots .circles .circle:hover .background-color{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #00b4f0;
+}
+#featured .dots .circles .circle.active .background-color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00b4f0;
+}
+
+/*
+Top Games Section
+*/
+
+#top-games{
+    margin-bottom: 28px;
+}
+#top-games .container{
+    margin: 0 auto;
+    width: 1400px;
+}
+#top-games .games{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+#top-games .games .game{
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    cursor: pointer;
+}
+#top-games .games img{
+    width: 100%;
+    height: auto;
+} 
+#top-games .container .top-games-title{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+#top-games .container .top-games-title a{
+    float: right;
+    color: #49adff;
+    font-size: 1rem;
+    bottom: 0;
+    position: relative;
+    border-radius: 5px;
+    padding: 5px;
+}
+#top-games .container .top-games-title a:hover{
+    background-color: rgba(255, 255, 255, .2);
+}
+#top-games .games .game .info{
+    width: 100%;
+    background-color: #253041;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+#top-games .games .game:hover .info{
+    background-color: #313f55;
+}
+#top-games .games .game .info .title{
+    font-weight: 550;
+    margin-bottom: 8px;
+}
+#top-games .games .game .info .views{
+    color: #8c9198;
+    font-size: 1rem;
+    font-weight: 350;
+}
+#top-games .games .game .info .views .fas{
+    margin-right: 5px;
+}
+
+/*
+    Only on Mixer Section
+*/
+#only-mixer{
+    margin: 25px 0px;
+}
+#only-mixer .only-mixer-container{
+    margin: 0 auto;
+    width: 1400px;
+}
+#only-mixer .games{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+}
+#only-mixer .games .game{
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+}
+#only-mixer .games img{
+    width: 100%;
+    height: 100%;
+} 
+#only-mixer .only-mixer-container .only-mixer-title{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+#only-mixer .only-mixer-container .only-mixer-title a{
+    float: right;
+    color: #49adff;
+    font-size: 1rem;
+    bottom: 0;
+    position: relative;
+    border-radius: 5px;
+    padding: 5px;
+}
+#only-mixer .only-mixer-container .only-mixer-title a:hover{
+    background-color: rgba(255, 255, 255, .2);
+}
+#only-mixer .only-mixer-container .games .game img{
+    opacity: 0.7;
+}
+#only-mixer .only-mixer-container .games .game span{
+    text-transform: uppercase;
+    z-index: 1;
+}
+#only-mixer .games .game .info{
+    width: 100%;
+    background-color: #253041;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+#only-mixer .games .game:hover .info{
+    background-color: #313f55;
+    
+}
+#only-mixer .games .game .info .title{
+    font-weight: 550;
+    margin-bottom: 8px;
+}
+#only-mixer .games .game .info .views{
+    color: #8c9198;
+    font-size: 1rem;
+    font-weight: 350;
+}
+#only-mixer .games .game .info .views .fas{
+    margin-right: 5px;
+}
+/*
+ Up and Coming Section
+*/
+#up-coming{
+    margin: 25px 0px;
+}
+#up-coming .up-coming-container{
+    margin: 0 auto;
+    width: 1400px;
+    justify-content: space-evenly;
+}
+#up-coming .games{
+    display: grid;
+    grid-template-columns: .8fr .8fr .8fr .8fr;
+    grid-gap: 10px;
+    border: 2px;
+}
+#up-coming .games .game{
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    
+}
+#up-coming .games img{
+    width: 100%;
+    height: 100%;
+} 
+#up-coming .up-coming-container .up-coming-title{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+#up-coming .up-coming-container .up-coming-title a{
+    float: right;
+    color: #49adff;
+    font-size: 1rem;
+    bottom: 0;
+    position: relative;
+    border-radius: 5px;
+    padding: 5px;
+}
+#up-coming .up-coming-container .up-coming-title a:hover{
+    background-color: rgba(255, 255, 255, .2);
+}
+#up-coming .up-coming-container .games .game .user-img img{
+    height: 52px;
+    width: 52px; 
+    border-radius: 50%;
+}
+#up-coming .games .game .info{
+    width: 100%;
+    background-color: #253041;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+#up-coming .games .game:hover .info{
+    background-color: #313f55; 
+}
+#up-coming .games .game .info{
+    display: flex;
+    padding: 16px;
+    align-items: center;
+}
+#up-coming .games .game .info .title{
+    font-weight: 550;
+    margin-bottom: 8px;
+}
+#up-coming .games .game .info .views{
+    color: #8c9198;
+    font-size: 1rem;
+    font-weight: 350;
+}
+#up-coming .games .game .info .views .fas{
+    margin-right: 5px;
+}
+#up-coming .games .game .livestream-snapshot{
+    position: relative; 
+}
+#up-coming .games .game .livestream-snapshot .live-container{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 0px 5px;
+}
+#up-coming .games .game .livestream-info .views{
+    background: rgba(17,17,17,0.8);
+    z-index: 1;
+}
+#up-coming .games .game .livestream-snapshot .live.live-container .viewers .fas{
+    margin-right: 5px;
+    color: white;
+}
+#up-coming .games .game .info img{
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#up-coming .games .game  .livestream-snapshot .livestream-info{
+    display: inline-block;
+}
+#up-coming .games .game .livestream-info{
+    display: inline-block;
+}
+#up-coming .games .game .livestream-snapshot .live-container{
+    position: absolute;
+    top: 0;
+}
+#up-coming .games .game .livestream-snapshot .live-container .live{
+    display: inline-block;
+    background-color: rgba(17,17,17,0.5);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+}
+#up-coming .games .game .livestream-snapshot .live-container .viewers{
+    display: inline-block;
+    background-color: rgba(17,17,17,0.5);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+#up-coming .games .game .livestream-snapshot .live-container .live span.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #df158a;
+    display: inline-block;
+    padding: 5px 0px 0px 5px;
+    margin-right: 5px;
+}
+#up-coming .games .game .info div h5{
+    font-family: inherit;
+    color: #8c9198;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left: 10px;
+}
+
+/* 
+    Top Streams
+*/
+#top-streams{
+    margin: 25px 0px;
+}
+#top-streams .top-streams-container{
+    margin: 0 auto;
+    width: 1400px;
+    justify-content: space-evenly;
+}
+#top-streams .games{
+    display: grid;
+    grid-template-columns: .8fr .8fr .8fr .8fr;
+    grid-gap: 10px;
+    border: 2px;
+}
+#top-streams .top-streams-container .top-streams-title .right-menu{
+    float: right;
+}
+#top-streams .top-streams-container .top-streams-title .right-menu .stream-filter{
+    padding-top: 5px;
+    margin-left: 15px;
+}
+#top-streams .top-streams-container .top-streams-title .right-menu input[type = "text"]{
+    background-color: #131d2c;
+    border: none;
+    padding: 10px;
+    border-color: white;
+    border-radius: 4px;
+    height: 30px;
+    width: 200px;
+}
+
+#top-streams .games .game{
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    
+}
+#top-streams .games img{
+    width: 100%;
+    height: 100%;
+} 
+#top-streams .top-streams-container .top-streams-title{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+#top-streams .top-streams-container .top-streams-title a{
+    float: right;
+    color: #49adff;
+    font-size: 1rem;
+    bottom: 0;
+    position: relative;
+    border-radius: 5px;
+    padding: 5px;
+}
+#top-streams .top-streams-container .top-streams-title a:hover{
+    background-color: rgba(255, 255, 255, .2);
+}
+#top-streams .top-streams-container .games .game .user-img img{
+    height: 52px;
+    width: 52px; 
+    border-radius: 50%;
+}
+#top-streams .games .game .info{
+    width: 100%;
+    background-color: #253041;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+#top-streams .games .game:hover .info{
+    background-color: #313f55; 
+}
+#top-streams .games .game .info{
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    background-color: #313f55;
+}
+#top-streams .games .game .info .title{
+    font-weight: 550;
+    margin-bottom: 8px;
+}
+#top-streams .games .game .info .views{
+    color: #8c9198;
+    font-size: 1rem;
+    font-weight: 350;
+}
+#top-streams .games .game .info .views .fas{
+    margin-right: 5px;
+}
+#top-streams .games .game .livestream-snapshot{
+    position: relative; 
+}
+#top-streams .games .game .livestream-snapshot .live-container{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 0px 5px;
+}
+#top-streams .games .game .livestream-info .views{
+    background: rgba(17,17,17,0.8);
+    z-index: 1;
+}
+#top-streams .games .game .livestream-snapshot .live.live-container .viewers .fas{
+    margin-right: 5px;
+    color: white;
+}
+#top-streams .games .game .info img{
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#top-streams .games .game  .livestream-snapshot .livestream-info{
+    display: inline-block;
+}
+#top-streams .games .game .livestream-info{
+    display: inline-block;
+}
+#top-streams .games .game .livestream-snapshot .live-container{
+    position: absolute;
+    top: 0;
+}
+#top-streams .games .game .livestream-snapshot .live-container .live{
+    display: inline-block;
+    background-color: rgba(17,17,17,0.5);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+}
+#top-streams .games .game .livestream-snapshot .live-container .viewers{
+    display: inline-block;
+    background-color: rgba(17,17,17,0.5);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+#top-streams .games .game .livestream-snapshot .live-container .live span.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #df158a;
+    display: inline-block;
+    padding: 5px 0px 0px 5px;
+    margin-right: 5px;
+}
+#top-streams .games .game .info div h5{
+    font-family: inherit;
+    color: #8c9198;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left: 10px;
+}
+
